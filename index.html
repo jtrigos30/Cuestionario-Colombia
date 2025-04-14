@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>COLOMBIA</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container__contenido">
+            <div class="container__informaciones">
+                <div class="container__texto">
+                    <!-- Título de la pregunta -->
+                    <h1 id="tituloPregunta">Cuestionario sobre Colombia </h1>
+                    <!-- Opciones de la pregunta -->
+                    <div class="container__p">
+                        <p id="opcionesTexto" class="texto__parrafo">Selecciona la respuesta correcta.</p>
+                    </div>
+                </div>
+                
+                <!-- Campo de entrada para la respuesta del usuario -->
+                <input type="text" id="valorUsuario" autocomplete="off" class="container__input" maxlength="1" oninput="validarEntrada(this)">
+
+                <!-- Botones para interactuar con el juego -->
+                <div class="chute container__botones">
+                    <button onclick="mostrarPregunta();" class="container__boton" id="preguntaAleatoria">Pregunta Aleatoria</button>
+                    <button onclick="verificarIntento();" class="container__boton" id="verificarRespuesta" disabled>Verificar Respuesta</button>
+                    <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Nuevo juego</button>
+                </div>
+            </div>
+
+            <img src="img/Colombia.png" alt="Ilustración Colombia" class="container__imagen-persona" />
+        </div>
+    </div>
+
+    <script src="cuestionario.js"></script>
+</body>
+
+</html>
